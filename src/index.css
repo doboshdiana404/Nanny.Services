@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* ===== ROOT VARIABLES ===== */
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --background: #ffedf1;
+  --surface: #fff6fa;
+  --accent: #9c3541;
+  --light-gray: #e2dcdc;
+  --pressed: #6c1b24;
+  --hover: #ba4b59;
+  --black: #000;
+}
+body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-inline: 10px;
+}
+button {
+  cursor: pointer;
+}

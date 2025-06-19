@@ -1,0 +1,85 @@
+.heroTitle {
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fbfbfb;
+  margin-bottom: 28px;
+  width: 517px;
+}
+.heroDescription {
+  font-size: 28px;
+  line-height: 1.07143;
+  letter-spacing: -0.02em;
+  color: #fbfbfb;
+  margin-bottom: 64px;
+  width: 517px;
+}
+.heroBtn {
+  border: 1px solid rgba(251, 251, 251, 0.4);
+  border-radius: 30px;
+  padding: 18px 50px;
+  width: 230px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  background-color: transparent;
+}
+.sectionHero {
+  background-color: #f03f3b;
+  border-radius: 30px;
+  width: 1376px;
+  height: 736px;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+.heroWrap {
+  display: flex;
+  gap: 64px;
+}
+.heroInfo {
+  font-size: 16px;
+  color: rgba(17, 16, 28, 0.5);
+}
+
+.heroInfoNumber {
+  font-weight: 700;
+  font-size: 24px;
+  color: #11101c;
+}
+.heroInfoWrap {
+  display: flex;
+  gap: 16px;
+  border-radius: 20px;
+  width: 284px;
+  height: 118px;
+  background-color: #fbfbfb;
+  align-items: center;
+  justify-content: center;
+}
+.heroLeftSide {
+  padding-top: 251px;
+  padding-left: 96px;
+}
+.heroRightSide {
+  background-image: url('/Hero/heroImage.png');
+  background-size: cover;
+  width: 699px;
+  height: 736px;
+  padding-top: 568px;
+  padding-left: 365px;
+}
+.iconCheck {
+  fill: #fbfbfb;
+}
+.heroCheckWrap {
+  border-radius: 13px;
+  width: 54px;
+  height: 54px;
+  background-color: #f03f3b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
