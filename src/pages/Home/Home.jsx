@@ -1,14 +1,17 @@
-import Header from '@/Layout/Header/Header';
+import { useNavigate } from 'react-router-dom';
 import s from './Home.module.css';
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <section className={s.sectionHero}>
-      <Header />
       <div className={s.heroWrap}>
         <div className={s.heroLeftSide}>
           <h1 className={s.heroTitle}>Make Life Easier for the Family:</h1>
           <p className={s.heroDescription}>Find Babysitters Online for All Occasions</p>
-          <button className={s.heroBtn}>Get started</button>
+          <button className={s.heroBtn} onClick={() => navigate('/nannies')}>
+            Get started
+          </button>
         </div>
         <div className={s.heroRightSide}>
           <div className={s.heroInfoWrap}>

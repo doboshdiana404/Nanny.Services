@@ -30,6 +30,8 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 img {
@@ -39,11 +41,40 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 1204px;
+  margin: 0 auto;
   padding-inline: 10px;
 }
 button {
   cursor: pointer;
+}
+img,
+picture,
+video,
+canvas {
+  display: block;
+
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  border: none;
+
+  font: inherit;
+
+  background: none;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.nanniesImg {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
 }

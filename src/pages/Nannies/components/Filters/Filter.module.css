@@ -1,0 +1,65 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  width: 226px;
+}
+
+.selectButton {
+  background: #f03d3d;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11111;
+  color: #fbfbfb;
+  display: flex;
+  justify-content: space-between;
+  width: 226px;
+}
+
+.arrow {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 6px;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+
+.option {
+  padding: 6px 18px 6px 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 18px;
+  line-height: 1.11111;
+  color: rgba(17, 16, 28, 0.3);
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+.chevronDownIcon {
+  fill: none;
+  stroke: #fbfbfb;
+}
+.activeOption {
+  color: #11101c;
+}

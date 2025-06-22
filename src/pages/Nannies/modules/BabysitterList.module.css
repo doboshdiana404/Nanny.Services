@@ -1,0 +1,21 @@
+.loadMoreBtn {
+  border-radius: 30px;
+  padding: 14px 40px;
+  width: 159px;
+  background-color: #f03f3b;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+}
+.loadMoreBtnWrap {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.noResults {
+  font-style: italic;
+  color: #888;
+  margin-top: 20px;
+}

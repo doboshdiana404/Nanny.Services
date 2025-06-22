@@ -1,13 +1,71 @@
-.sectionHeader {
+.home {
   position: fixed;
   z-index: 10;
   top: 32px;
   left: 0;
   left: 50%;
-  /* transform: translateX(-50%); */
+  transform: translateX(-50%);
+  border-bottom: 1px solid rgba(251, 251, 251, 0.4);
   width: 100%;
-  max-width: 1920px;
-  padding: 12px 0;
+}
 
-  /* background: linear-gradient(360deg, #f4c0cc 0%, #f7c9d4 100%); */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+}
+
+.default {
+  background-color: #f44336;
+  border-radius: 0;
+  position: static;
+}
+.nav {
+  display: flex;
+  gap: 92px;
+}
+
+.pageNav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.pageNavItem {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  text-decoration: none;
+}
+.navAuthItem {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  text-decoration: none;
+}
+.navAuthList {
+  display: flex;
+  gap: 8px;
+}
+.loginBtn {
+  border: 1px solid rgba(251, 251, 251, 0.4);
+  border-radius: 30px;
+  padding: 14px 39px;
+  width: 124px;
+}
+.registerBtn {
+  border-radius: 30px;
+  padding: 14px 40px;
+  width: 168px;
+  background: #f03f3b;
+}
+.logo {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.02em;
+  color: #fbfbfb;
 }
