@@ -5,7 +5,7 @@
 }
 
 .selectButton {
-  background: #f03d3d;
+  background: var(--dark);
   color: white;
   padding: 14px 18px;
   border-radius: 12px;
@@ -61,5 +61,13 @@
   stroke: #fbfbfb;
 }
 .activeOption {
-  color: #11101c;
+  color: var(--color-text);
+}
+.labelFilter {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28571;
+  color: #8a8a89;
+  margin-bottom: 8px;
 }

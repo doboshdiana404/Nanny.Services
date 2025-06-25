@@ -21,11 +21,11 @@
 }
 .detailsInfoItemSpan {
   text-decoration-skip-ink: none;
-  color: #11101c;
+  color: var(--color-text);
 }
 .iconPin {
   fill: none;
-  stroke: #11101c;
+  stroke: var(--color-text);
   margin-right: 4px;
 }
 .topRightInfoWrap {
@@ -57,7 +57,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1;
-  color: #11101c;
+  color: var(--color-text);
   margin-top: 8px;
 }
 .aboutDescription {
@@ -73,10 +73,10 @@
   line-height: 1.5;
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  color: #11101c;
+  color: var(--color-text);
 }
 .nanniesAvatarWrap {
-  border: 2px solid rgba(240, 63, 59, 0.2);
+  border: 2px solid var(--light);
   border-radius: 30px;
   padding: 12px;
   display: flex;
@@ -131,7 +131,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
-  color: #11101c;
+  color: var(--color-text);
 }
 .reviewComment {
   font-weight: 400;
@@ -145,12 +145,12 @@
 }
 .firstLetter {
   border-radius: 100px;
-  background-color: rgba(240, 63, 59, 0.2);
+  background-color: var(--light);
   padding: 12px 14px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
-  color: #f03f3b;
+  color: var(--dark);
   width: 44px;
   height: 44px;
   display: flex;
@@ -165,7 +165,7 @@
   border-radius: 30px;
   padding: 14px 28px;
   width: 215px;
-  background-color: #f03f3b;
+  background-color: var(--dark);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;

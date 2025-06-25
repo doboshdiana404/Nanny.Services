@@ -4,7 +4,7 @@
   padding: 16px 18px 16px 18px;
   font-size: 16px;
   line-height: 1.25;
-  color: #11101c;
+  color: var(--color-text);
   width: 100%;
   margin-bottom: 16px;
   transition: all 100ms;
@@ -25,7 +25,7 @@
   border-radius: 30px;
   padding: 16px 217px;
   width: 472px;
-  background-color: #f03f3b;
+  background-color: var(--dark);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
@@ -51,5 +51,5 @@
   --text-color: #11101c;
 }
 .meetingTimeLabel {
-  color: #f03f3b;
+  color: var(--dark);
 }

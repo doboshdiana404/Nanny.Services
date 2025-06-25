@@ -1,0 +1,8 @@
+.noResults {
+  font-style: italic;
+  color: #888;
+  margin-top: 20px;
+}
+.loading {
+  text-align: center;
+}

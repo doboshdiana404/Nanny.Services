@@ -78,3 +78,23 @@ a {
   height: 96px;
   object-fit: cover;
 }
+:root {
+  --dark: #f03f3b;
+  --light: rgba(240, 63, 59, 0.2);
+  --color-text: #11101c;
+}
+
+.theme-green {
+  --dark: #103931;
+  --light: rgba(16, 57, 49, 0.2);
+}
+
+.theme-red {
+  --dark: #f03f3b;
+  --light: rgba(240, 63, 59, 0.2);
+}
+
+.theme-blue {
+  --dark: #0957c3;
+  --light: rgba(9, 87, 195, 0.2);
+}

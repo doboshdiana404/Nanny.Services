@@ -17,7 +17,7 @@
 }
 
 .default {
-  background-color: #f44336;
+  background-color: var(--dark);
   border-radius: 0;
   position: static;
 }
@@ -37,6 +37,7 @@
   letter-spacing: -0.01em;
   color: #fbfbfb;
   text-decoration: none;
+  position: relative;
 }
 .navAuthItem {
   font-weight: 500;
@@ -54,13 +55,26 @@
   border: 1px solid rgba(251, 251, 251, 0.4);
   border-radius: 30px;
   padding: 14px 39px;
-  width: 124px;
+  width: 134px;
+  transition: all 100ms;
+}
+
+.loginBtn:hover,
+.loginBtn:focus {
+  background-color: var(--dark);
+  border: 1px solid rgba(251, 251, 251, 0.749);
 }
 .registerBtn {
   border-radius: 30px;
   padding: 14px 40px;
   width: 168px;
-  background: #f03f3b;
+  background: var(--dark);
+  transition: all 100ms;
+}
+.registerBtn:hover,
+.registerBtn:focus {
+  color: var(--dark);
+  background-color: #fbfbfb;
 }
 .logo {
   font-weight: 500;
@@ -68,4 +82,46 @@
   line-height: 1.16667;
   letter-spacing: -0.02em;
   color: #fbfbfb;
+}
+.iconUser {
+  stroke: #fbfbfb;
+  fill: var(--dark);
+}
+.iconUserWrap {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.userName {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.11111;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+}
+
+.activeLink::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
 }

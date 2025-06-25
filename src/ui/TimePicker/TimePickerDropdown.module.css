@@ -23,7 +23,7 @@
 .icon {
   margin-left: 6px;
   fill: none;
-  stroke: #11101c;
+  stroke: var(--color-text);
 }
 
 .dropdown {

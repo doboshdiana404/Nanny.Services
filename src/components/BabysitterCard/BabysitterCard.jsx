@@ -1,13 +1,16 @@
 import { calculateAge } from '@/utils/calculateAge';
 import styles from './BabysitterCard.module.css';
-import { arrayToSentence } from '@/utils/arrayToSentence';
 import { useState } from 'react';
-import AppointmentModal from '../../modules/AppointmentModal/AppointmentModal';
+import AppointmentModal from '../../pages/Nannies/modules/AppointmentModal/AppointmentModal';
+import { useFavourites } from '@/context/FavouritesContext';
+import { arrayToSentence } from '@/utils/arrayToSentence';
 const BabysitterCard = ({ nanny, isExpanded, onExpand }) => {
   const { name, avatar_url, education, location, price_per_hour, rating, about, kids_age, experience, characters, birthday, reviews } = nanny;
   const age = calculateAge(birthday);
   const charactersStr = arrayToSentence(characters);
   const [isModalOpen, setModalOpen] = useState(false);
+  const { favourites, toggleFavourite } = useFavourites();
+  const isFavourite = favourites.some(n => n.id === nanny.id);
   return (
     <li className={styles.nannieItemWrap}>
       <div className={styles.nanniesAvatarWrap}>
@@ -35,10 +38,16 @@ const BabysitterCard = ({ nanny, isExpanded, onExpand }) => {
                 Price / 1 hour: <span style={{ color: '#38cd3e' }}>{price_per_hour}$</span>
               </p>
             </div>
-            <button className={styles.favouriteBtn}>
-              <svg width={26} height={26}>
-                <use href="/sprite.svg#icon-heart"></use>
-              </svg>
+            <button className={styles.favouriteBtn} onClick={() => toggleFavourite(nanny)}>
+              {isFavourite ? (
+                <svg width={26} height={26}>
+                  <use href="/sprite.svg#icon-heart-filled"></use>
+                </svg>
+              ) : (
+                <svg width={26} height={26} style={{ fill: 'none', stroke: '#11101c' }}>
+                  <use href="/sprite.svg#icon-heart"></use>
+                </svg>
+              )}
             </button>
           </div>
         </div>

@@ -18,22 +18,27 @@
 .heroBtn {
   border: 1px solid rgba(251, 251, 251, 0.4);
   border-radius: 30px;
-  padding: 18px 50px;
+  padding: 18px 0;
   width: 230px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: #fbfbfb;
+  position: relative;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sectionHero {
-  background-color: #f03f3b;
+  background-color: var(--dark);
   border-radius: 30px;
   width: 1376px;
   height: 736px;
   margin: 0 auto;
   margin-top: 32px;
+  overflow: hidden;
 }
 .heroWrap {
   display: flex;
@@ -47,7 +52,7 @@
 .heroInfoNumber {
   font-weight: 700;
   font-size: 24px;
-  color: #11101c;
+  color: var(--color-text);
 }
 .heroInfoWrap {
   display: flex;
@@ -78,8 +83,30 @@
   border-radius: 13px;
   width: 54px;
   height: 54px;
-  background-color: #f03f3b;
+  background-color: var(--dark);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.heroBtn .icon {
+  transition: opacity 0.2s ease;
+}
+
+.heroBtn .hoverIcon {
+  opacity: 0;
+  position: absolute;
+  right: 30px;
+}
+.defaultIcon {
+  margin-left: 18px;
+}
+.heroBtn:hover .defaultIcon,
+.heroBtn:active .defaultIcon {
+  opacity: 0;
+}
+
+.heroBtn:hover .hoverIcon,
+.heroBtn:active .hoverIcon {
+  opacity: 1;
 }

@@ -4,10 +4,13 @@ import './index.css';
 import App from './App.jsx';
 import 'modern-normalize';
 import { AuthProvider } from './context/AuthContext';
+import { FavouritesProvider } from './context/FavouritesContext';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-      <App />
+      <FavouritesProvider>
+        <App />
+      </FavouritesProvider>
     </AuthProvider>
   </StrictMode>
 );

@@ -3,6 +3,7 @@ import BabysitterCard from '../../components/BabysitterCard/BabysitterCard';
 import { useEffect, useMemo, useState } from 'react';
 import styles from './BabysitterList.module.css';
 import Filter from '../../components/Filters/Filters';
+import LoadMore from '@/components/LoadMore/LoadMore';
 
 const BabysitterList = () => {
   const { babysitters, loading } = useBabysitters();
@@ -51,7 +52,7 @@ const BabysitterList = () => {
     <>
       <Filter selected={filter} onChange={setFilter} />
 
-      {loading && <p>Loading...</p>}
+      {loading && <p className={styles.loading}>Loading...</p>}
 
       {!loading && sortedAndFiltered.length === 0 && <p className={styles.noResults}>Nothing found on your filter</p>}
 
@@ -59,13 +60,7 @@ const BabysitterList = () => {
         {!loading && visibleBabysitters.map(nanny => <BabysitterCard key={nanny.id} nanny={nanny} isExpanded={nanny.id === expandedId} onExpand={handleExpand} />)}
       </ul>
 
-      {visibleCount < sortedAndFiltered.length && (
-        <div className={styles.loadMoreBtnWrap}>
-          <button onClick={() => setVisibleCount(prev => prev + 3)} className={styles.loadMoreBtn}>
-            Load more
-          </button>
-        </div>
-      )}
+      {visibleCount < sortedAndFiltered.length && <LoadMore setVisibleCount={setVisibleCount} />}
     </>
   );
 };

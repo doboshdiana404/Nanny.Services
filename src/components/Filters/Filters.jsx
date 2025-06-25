@@ -23,6 +23,7 @@ const Filter = ({ selected, onChange }) => {
 
   return (
     <div className={styles.wrapper}>
+      <label className={styles.labelFilter}>Filters</label>
       <button onClick={() => setOpen(!open)} className={styles.selectButton}>
         {selectedLabel}
         <span className={styles.arrow}>
@@ -31,7 +32,6 @@ const Filter = ({ selected, onChange }) => {
           </svg>
         </span>
       </button>
-
       {open && (
         <ul className={styles.optionsList}>
           {options.map(opt => (

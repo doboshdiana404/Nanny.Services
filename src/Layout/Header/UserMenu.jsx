@@ -1,17 +1,17 @@
-import { signOut } from 'firebase/auth';
-import { auth } from '../../firebase/firebase';
-
+import LogOut from './LogOut';
+import styles from './Header.module.css';
 const UserMenu = ({ user }) => {
-  const handleLogout = () => {
-    signOut(auth);
-  };
-
   return (
-    <div>
-      <span>
-        <i className="fa fa-user" /> {user.email}
+    <div className={styles.userMenu}>
+      <span className={styles.headerUserInfo}>
+        <span className={styles.iconUserWrap}>
+          <svg width={24} height={24} className={styles.iconUser}>
+            <use href="/sprite.svg#icon-user"></use>
+          </svg>
+        </span>
+        <span className={styles.userName}>{user.username}</span>
       </span>
-      <button onClick={handleLogout}>Log out</button>
+      <LogOut />
     </div>
   );
 };

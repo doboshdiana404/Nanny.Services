@@ -1,8 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import s from './Home.module.css';
+import { useEffect } from 'react';
 const Home = () => {
   const navigate = useNavigate();
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
 
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
   return (
     <section className={s.sectionHero}>
       <div className={s.heroWrap}>
@@ -11,6 +18,16 @@ const Home = () => {
           <p className={s.heroDescription}>Find Babysitters Online for All Occasions</p>
           <button className={s.heroBtn} onClick={() => navigate('/nannies')}>
             Get started
+            <span className={`${s.icon} ${s.defaultIcon} `}>
+              <svg width={15} height={17}>
+                <use href="/sprite.svg#icon-Arrow"></use>
+              </svg>
+            </span>
+            <span className={`${s.icon} ${s.hoverIcon}`}>
+              <svg width={20} height={16}>
+                <use href="/sprite.svg#icon-Arrow2"></use>
+              </svg>
+            </span>
           </button>
         </div>
         <div className={s.heroRightSide}>

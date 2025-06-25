@@ -1,0 +1,98 @@
+.modal-backdrop {
+  position: fixed;
+  top: -32px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 11, 11, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fbfbfb;
+  padding: 64px;
+  border-radius: 30px;
+  max-width: 565px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* top: 0.5rem;
+  right: 1rem; */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-submit {
+  border-radius: 30px;
+  padding: 16px 190px;
+  width: 438px;
+  background-color: #f03f3b;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  margin-top: 40px;
+  transition: all 100ms;
+}
+.modal-submit:hover {
+  background-color: #fbfbfb;
+  color: #f03f3b;
+  border: 1px solid #f03f3b;
+}
+.modal-error {
+  color: red;
+  font-size: 0.9rem;
+}
+.iconClose {
+  stroke: #11101c;
+}
+.authTitle {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #11101c;
+  margin-bottom: 20px;
+}
+.authDescription {
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(17, 16, 28, 0.5);
+  margin-bottom: 40px;
+}
+.inputs {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px 16px 18px;
+  width: 438px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #11101c;
+}
+.inputs:not(:last-child) {
+  margin-bottom: 18px;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-75%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}

@@ -53,7 +53,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  color: #11101c;
+  color: var(--color-text);
 }
 .modalDescription {
   font-weight: 400;
@@ -67,9 +67,9 @@
   font-size: 40px;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  color: #11101c;
+  color: var(--color-text);
   width: 394px;
 }
 .iconClose {
-  stroke: #11101c;
+  stroke: var(--color-text);
 }
