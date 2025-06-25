@@ -1,0 +1,75 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px 64px;
+  position: relative;
+  border-radius: 8px;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+}
+.modalNannyInfo {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+  align-items: center;
+}
+.modalNannyAvatar {
+  border-radius: 15px;
+}
+.modalNannyInscription {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: #8a8a89;
+}
+.modalNannyName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #11101c;
+}
+.modalDescription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(17, 16, 28, 0.5);
+  margin-top: 20px;
+}
+.modalAppointmentTitle {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #11101c;
+  width: 394px;
+}
+.iconClose {
+  stroke: #11101c;
+}

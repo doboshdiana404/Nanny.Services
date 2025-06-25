@@ -1,4 +1,4 @@
-import BabysitterList from './modules/BabysitterList';
+import BabysitterList from './modules/BabysitterList/BabysitterList';
 
 const Nannies = () => {
   return (

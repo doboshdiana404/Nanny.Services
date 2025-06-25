@@ -1,10 +1,13 @@
 import { calculateAge } from '@/utils/calculateAge';
 import styles from './BabysitterCard.module.css';
 import { arrayToSentence } from '@/utils/arrayToSentence';
+import { useState } from 'react';
+import AppointmentModal from '../../modules/AppointmentModal/AppointmentModal';
 const BabysitterCard = ({ nanny, isExpanded, onExpand }) => {
   const { name, avatar_url, education, location, price_per_hour, rating, about, kids_age, experience, characters, birthday, reviews } = nanny;
   const age = calculateAge(birthday);
   const charactersStr = arrayToSentence(characters);
+  const [isModalOpen, setModalOpen] = useState(false);
   return (
     <li className={styles.nannieItemWrap}>
       <div className={styles.nanniesAvatarWrap}>
@@ -87,7 +90,10 @@ const BabysitterCard = ({ nanny, isExpanded, onExpand }) => {
                 </li>
               ))}
             </ul>
-            <button className={styles.makeAppointmentBtn}>Make an appointment</button>
+            <button className={styles.makeAppointmentBtn} onClick={() => setModalOpen(true)}>
+              Make an appointment
+            </button>
+            <AppointmentModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} nanny={nanny} />
           </div>
         )}
       </div>

@@ -1,8 +1,8 @@
 import { useBabysitters } from '@/hooks/useBabysitters';
-import BabysitterCard from '../components/BabysitterCard/BabysitterCard';
+import BabysitterCard from '../../components/BabysitterCard/BabysitterCard';
 import { useEffect, useMemo, useState } from 'react';
 import styles from './BabysitterList.module.css';
-import Filter from '../components/Filters/Filters';
+import Filter from '../../components/Filters/Filters';
 
 const BabysitterList = () => {
   const { babysitters, loading } = useBabysitters();
@@ -53,7 +53,7 @@ const BabysitterList = () => {
 
       {loading && <p>Loading...</p>}
 
-      {!loading && sortedAndFiltered.length === 0 && <p className={styles.noResults}>Нічого не знайдено за вашим фільтром</p>}
+      {!loading && sortedAndFiltered.length === 0 && <p className={styles.noResults}>Nothing found on your filter</p>}
 
       <ul style={{ marginTop: '32px' }}>
         {!loading && visibleBabysitters.map(nanny => <BabysitterCard key={nanny.id} nanny={nanny} isExpanded={nanny.id === expandedId} onExpand={handleExpand} />)}

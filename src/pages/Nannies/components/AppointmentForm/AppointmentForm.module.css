@@ -1,0 +1,55 @@
+.inputs {
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  padding: 16px 18px 16px 18px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #11101c;
+  width: 100%;
+  margin-bottom: 16px;
+  transition: all 100ms;
+}
+.firstFourInputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+.firstFourInputs input {
+  width: 232px;
+}
+.textareaInput {
+  height: 116px;
+  resize: none;
+}
+.apointmentSentBtn {
+  border-radius: 30px;
+  padding: 16px 217px;
+  width: 472px;
+  background-color: #f03f3b;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+}
+.formSentAppointment {
+  margin-top: 20px;
+}
+.inputs:hover {
+  border: 1px solid rgba(17, 16, 28, 0.3);
+}
+
+.inputs:focus {
+  border: 1px solid #2684ff;
+  outline: none;
+}
+.customIosPicker {
+  width: 100%;
+  max-width: 250px;
+  --primary-color: #2684ff;
+  --background-color: #fff;
+  --text-color: #11101c;
+}
+.meetingTimeLabel {
+  color: #f03f3b;
+}
