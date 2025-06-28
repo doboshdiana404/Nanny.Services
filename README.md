@@ -1,12 +1,24 @@
-# React + Vite
+🧸 Nanny Services Web App A web application for finding and hiring nannies. Users can browse nanny profiles, filter them by experience or location, save favorites, and book
+appointments. Authentication and data storage are powered by Firebase.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📌 Project Description Nanny Services is designed to help parents find trusted babysitters based on various criteria. Key features include:
 
-Currently, two official plugins are available:
+-Viewing a list of available nannies -Filtering -Viewing detailed nanny profiles -Adding nannies to a favorites list -Booking appointment times -User authentication (sign up / log
+in / log out)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠 Technologies Used React – Front-end library for building user interfaces
 
-## Expanding the ESLint configuration
+-Firebase – Backend services (Authentication, Firestore, Hosting) -CSS Modules – Component-level styling -React Router – Routing within the app -Context API – Authentication state
+management
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎨 Design 👉 https://www.figma.com/file/u36ajEOsnwio2GDGiabVPD/Nanny-Sevices?type=design&node-id=0-1&mode=design&t=CZpMnnOCRwAYc81O-0
+
+The application follows a responsive layout and supports both desktop and mobile viewports.
+
+📄 Features / MVP Scope User registration and login with Firebase Auth
+
+-Auth state handling via Context -Nannies list with filter options -Individual nanny profile page -Add/remove nanny to/from favorites -Favorites page -Appointment modal with
+date/time selection -Modal windows for login/registration -Mobile-friendly design src/ ├── components/ # Reusable UI components (buttons, cards, headers) ├── pages/ # Route-based
+pages (Home, Favorites, Profile, etc.) ├── modules/ # Feature-specific modules (AppointmentModal, AuthModals) ├── context/ # Global React contexts (e.g. AuthContext) ├──
+firebase/ # Firebase config and utilities ├── utils/ # Utility functions (e.g. age calculation) ├── assets/ # Static images, icons, etc. ├── App.jsx # Main app component with
+routes └── index.js # Entry point
