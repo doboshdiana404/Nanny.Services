@@ -1,10 +1,9 @@
-// context/ThemeContext.js
 import { createContext, useEffect, useState } from 'react';
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('red'); // default
+  const [theme, setTheme] = useState('red');
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');

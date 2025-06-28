@@ -1,14 +1,8 @@
-.nannieItemWrap,
-.mainTopInfo,
-.topInfo,
-.detailsInfoList,
-.topRightInfoWrap {
-  display: flex;
-}
 .detailsInfoList {
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 24px;
+  max-width: 340px;
 }
 .detailsInfoItem {
   border-radius: 24px;
@@ -29,8 +23,9 @@
   margin-right: 4px;
 }
 .topRightInfoWrap {
-  gap: 48px;
-  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
 }
 .topInfo {
   justify-content: space-between;
@@ -66,6 +61,7 @@
   color: rgba(17, 16, 28, 0.5);
   margin-top: 24px;
   margin-bottom: 14px;
+  max-width: 319px;
 }
 .readMoreBtn {
   font-weight: 500;
@@ -81,11 +77,12 @@
   padding: 12px;
   display: flex;
   align-items: center;
-  height: 120px;
   position: relative;
 }
 .nanniesImg {
   border-radius: 15px;
+  width: 319px;
+  height: 319px;
 }
 .online {
   position: absolute;
@@ -97,27 +94,12 @@
   border-radius: 100%;
   border: 2.5px solid #fbfbfb;
 }
+.mainTopInfo {
+  flex-wrap: wrap;
+}
 .mainTopInfo p {
   position: relative;
   padding-right: 32px;
-}
-.mainTopInfo p:nth-child(1)::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  right: 16px;
-  width: 1px;
-  height: 16px;
-  background-color: rgba(17, 16, 28, 0.2);
-}
-.mainTopInfo p:nth-child(2)::after {
-  content: '';
-  position: absolute;
-  top: 4px;
-  right: 16px;
-  width: 0.5px;
-  height: 16px;
-  background-color: rgba(17, 16, 28, 0.2);
 }
 
 .reviewsList {
@@ -139,6 +121,7 @@
   line-height: 1.25;
   color: rgba(17, 16, 28, 0.5);
   margin-top: 16px;
+  max-width: 319px;
 }
 .reviewRating {
   margin-left: 8px;
@@ -173,4 +156,74 @@
   color: #fbfbfb;
   margin-top: 23px;
   margin-bottom: 24px;
+}
+.iconHeartFilled {
+  fill: var(--dark);
+}
+@media (min-width: 576px) {
+  .nannieItemWrap,
+  .detailsInfoList,
+  .mainTopInfo {
+    display: flex;
+  }
+  .nanniesAvatarWrap {
+    max-width: 337px;
+    height: 337px;
+  }
+  .nannieItemTopinfoWrap {
+    max-width: 600px;
+  }
+  .nanniesImg {
+    max-width: 309px;
+  }
+  .detailsInfoList {
+    max-width: 620px;
+  }
+}
+@media (min-width: 1024px) {
+  .topInfo {
+    display: flex;
+  }
+  .mainTopInfo p:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(17, 16, 28, 0.2);
+  }
+  .mainTopInfo p:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    width: 0.5px;
+    height: 16px;
+    background-color: rgba(17, 16, 28, 0.2);
+  }
+  .topRightInfoWrap {
+    gap: 48px;
+    align-items: center;
+  }
+  .nannieItemTopinfoWrap {
+    max-width: 980px;
+  }
+  .nanniesImg {
+    width: 96px;
+    height: 96px;
+  }
+  .nanniesAvatarWrap {
+    width: 120px;
+    height: 120px;
+  }
+  .detailsInfoList {
+    max-width: 980px;
+  }
+  .aboutDescription {
+    max-width: 980px;
+  }
+  .reviewComment {
+    max-width: 980px;
+  }
 }

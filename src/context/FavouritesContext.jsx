@@ -1,4 +1,3 @@
-// context/FavouritesContext.jsx
 import { createContext, useContext, useEffect, useState } from 'react';
 import { ref, onValue, set } from 'firebase/database';
 import { db } from '../firebase/firebase';
@@ -13,7 +12,6 @@ export const FavouritesProvider = ({ children }) => {
   const { user } = useReactContext(AuthContext);
   const [favourites, setFavourites] = useState([]);
 
-  // Завантажити з Firebase
   useEffect(() => {
     if (!user) {
       setFavourites([]);
@@ -25,7 +23,7 @@ export const FavouritesProvider = ({ children }) => {
     const unsubscribe = onValue(userFavouritesRef, snapshot => {
       const data = snapshot.val();
       if (data) {
-        const favArray = Object.values(data); // [{...}, {...}]
+        const favArray = Object.values(data);
         setFavourites(favArray);
       } else {
         setFavourites([]);
@@ -35,7 +33,6 @@ export const FavouritesProvider = ({ children }) => {
     return () => unsubscribe();
   }, [user]);
 
-  // Зберегти в Firebase
   const toggleFavourite = nanny => {
     if (!user) return;
 

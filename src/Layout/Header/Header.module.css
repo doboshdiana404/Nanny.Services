@@ -1,7 +1,7 @@
 .home {
   position: fixed;
   z-index: 10;
-  top: 32px;
+  top: 22px;
   left: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -19,8 +19,13 @@
 .default {
   background-color: var(--dark);
   border-radius: 0;
-  position: static;
+  position: relative;
 }
+.navtheme {
+  display: flex;
+  gap: 52px;
+}
+
 .nav {
   display: flex;
   gap: 92px;
@@ -86,11 +91,17 @@
 .iconUser {
   stroke: #fbfbfb;
   fill: var(--dark);
+  width: 24px;
+  height: 24px;
+  /* width: 20px;
+  height: 20px; */
 }
 .iconUserWrap {
   border-radius: 10px;
   width: 40px;
   height: 40px;
+  /* width: 30px;
+  height: 30px; */
   background-color: #fbfbfb;
   display: flex;
   align-items: center;
@@ -124,4 +135,79 @@
   height: 8px;
   border-radius: 50%;
   background-color: white;
+}
+.themeSwitch {
+  position: absolute;
+  top: 100px;
+  left: 90%;
+  transform: translateX(-50%);
+}
+/* MOBILE BUTTON */
+.burgerBtn {
+  display: none;
+}
+.nav {
+  display: none;
+}
+.desktopNav {
+  display: flex;
+}
+@media (min-width: 576px) and (max-width: 1024px) {
+  .burgerBtn {
+    display: none;
+  }
+  .nav {
+    display: flex;
+  }
+  .pageNav {
+    gap: 20px;
+  }
+  .userMenu {
+    gap: 10px;
+  }
+  .headerUserInfo {
+    gap: 6px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .loginBtn {
+    padding: 10px 20px;
+    width: 100px;
+  }
+  .navtheme {
+    gap: 10px;
+  }
+  .registerBtn {
+    padding: 10px 20px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .desktopNav {
+    display: none;
+  }
+  .userMenu {
+    gap: 24px;
+  }
+  .headerUserInfo {
+    gap: 14px;
+  }
+
+  .iconUserWrap {
+    width: 40px;
+    height: 40px;
+  }
+  .iconUser {
+    width: 20px;
+    height: 20px;
+  }
+  .burgerBtn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
 }

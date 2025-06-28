@@ -1,9 +1,11 @@
 import { calculateAge } from '@/utils/calculateAge';
 import styles from './BabysitterCard.module.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import AppointmentModal from '../../pages/Nannies/modules/AppointmentModal/AppointmentModal';
 import { useFavourites } from '@/context/FavouritesContext';
 import { arrayToSentence } from '@/utils/arrayToSentence';
+import { AuthContext } from '@/context/AuthContext';
+import { toast } from 'react-toastify';
 const BabysitterCard = ({ nanny, isExpanded, onExpand }) => {
   const { name, avatar_url, education, location, price_per_hour, rating, about, kids_age, experience, characters, birthday, reviews } = nanny;
   const age = calculateAge(birthday);
@@ -11,13 +13,23 @@ const BabysitterCard = ({ nanny, isExpanded, onExpand }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const { favourites, toggleFavourite } = useFavourites();
   const isFavourite = favourites.some(n => n.id === nanny.id);
+  const { user } = useContext(AuthContext);
+  const handleFavouriteClick = () => {
+    if (!user) {
+      toast.info('Please log in to add to favorites');
+      return;
+    }
+
+    toggleFavourite(nanny);
+  };
+
   return (
     <li className={styles.nannieItemWrap}>
       <div className={styles.nanniesAvatarWrap}>
         <img src={avatar_url} alt={name} width={96} height={96} className={styles.nanniesImg} />
         <div className={styles.online}></div>
       </div>
-      <div style={{ width: '992px' }}>
+      <div className={styles.nannieItemTopinfoWrap}>
         <div className={styles.topInfo}>
           <span>Nanny</span>
           <div className={styles.topRightInfoWrap}>
@@ -38,9 +50,9 @@ const BabysitterCard = ({ nanny, isExpanded, onExpand }) => {
                 Price / 1 hour: <span style={{ color: '#38cd3e' }}>{price_per_hour}$</span>
               </p>
             </div>
-            <button className={styles.favouriteBtn} onClick={() => toggleFavourite(nanny)}>
+            <button className={styles.favouriteBtn} onClick={handleFavouriteClick}>
               {isFavourite ? (
-                <svg width={26} height={26}>
+                <svg width={26} height={26} className={styles.iconHeartFilled}>
                   <use href="/sprite.svg#icon-heart-filled"></use>
                 </svg>
               ) : (

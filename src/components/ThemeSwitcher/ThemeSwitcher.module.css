@@ -1,27 +1,48 @@
-.switcher {
+.dropdown {
+  position: relative;
   display: flex;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-}
-
-.circle {
-  width: 28px;
-  height: 28px;
+  font-family: inherit;
   border-radius: 50%;
-  border: 2px solid transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
   cursor: pointer;
-  transition:
-    transform 0.2s,
-    box-shadow 0.3s;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.circle:hover {
-  transform: scale(1.1);
+.chevron {
+  margin-left: 2px;
+  fill: white;
 }
 
-.active {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
-  border-color: #333;
+.menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  border-radius: 8px;
+  padding: 6px 0;
+  z-index: 99;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 4px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.icon {
+  font-size: 18px;
 }

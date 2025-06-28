@@ -73,3 +73,17 @@
 .iconClose {
   stroke: var(--color-text);
 }
+@media screen and (max-width: 1024px) {
+  .iconClose {
+    width: 22px;
+    height: 22px;
+  }
+  .modalAppointmentTitle {
+    font-size: 30px;
+    width: 300px;
+  }
+  .modalContent {
+    padding: 10px 34px;
+    max-width: 600px;
+  }
+}

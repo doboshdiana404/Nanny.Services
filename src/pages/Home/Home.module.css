@@ -1,27 +1,28 @@
 .heroTitle {
   font-weight: 500;
-  font-size: 70px;
+  font-size: 30px;
+
   line-height: 1;
   letter-spacing: -0.03em;
   color: #fbfbfb;
   margin-bottom: 28px;
-  width: 517px;
+  width: 300px;
 }
 .heroDescription {
-  font-size: 28px;
+  font-size: 16px;
   line-height: 1.07143;
   letter-spacing: -0.02em;
   color: #fbfbfb;
-  margin-bottom: 64px;
-  width: 517px;
+  margin-bottom: 32px;
+  width: 350px;
 }
 .heroBtn {
   border: 1px solid rgba(251, 251, 251, 0.4);
   border-radius: 30px;
-  padding: 18px 0;
-  width: 230px;
+  padding: 12px 0;
+  width: 180px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: #fbfbfb;
@@ -30,18 +31,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .sectionHero {
   background-color: var(--dark);
   border-radius: 30px;
-  width: 1376px;
-  height: 736px;
+  width: 100%;
+  max-width: 1376px;
+  height: 706px;
   margin: 0 auto;
-  margin-top: 32px;
-  overflow: hidden;
+  margin-top: 22px;
 }
 .heroWrap {
-  display: flex;
   gap: 64px;
 }
 .heroInfo {
@@ -51,7 +52,7 @@
 
 .heroInfoNumber {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--color-text);
 }
 .heroInfoWrap {
@@ -65,16 +66,17 @@
   justify-content: center;
 }
 .heroLeftSide {
-  padding-top: 251px;
-  padding-left: 96px;
+  padding-top: 120px;
+  padding-left: 32px;
 }
 .heroRightSide {
   background-image: url('/Hero/heroImage.png');
   background-size: cover;
-  width: 699px;
-  height: 736px;
-  padding-top: 568px;
-  padding-left: 365px;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+  padding-top: 150px;
+  padding-left: 100px;
 }
 .iconCheck {
   fill: #fbfbfb;
@@ -109,4 +111,46 @@
 .heroBtn:hover .hoverIcon,
 .heroBtn:active .hoverIcon {
   opacity: 1;
+}
+@media (min-width: 768px) {
+  .heroTitle {
+  }
+}
+@media (min-width: 1024px) {
+  .heroTitle {
+    font-size: 70px;
+    width: 517px;
+  }
+  .heroDescription {
+    font-size: 28px;
+    margin-bottom: 64px;
+    width: 517px;
+  }
+  .heroBtn {
+    padding: 18px 0;
+    width: 230px;
+    font-size: 20px;
+  }
+  .sectionHero {
+    width: 1376px;
+  }
+  .heroWrap {
+    display: flex;
+  }
+  .heroInfoNumber {
+    font-size: 24px;
+  }
+  .heroLeftSide {
+    padding-top: 251px;
+    padding-left: 96px;
+  }
+  .heroRightSide {
+    width: 699px;
+    height: 736px;
+    padding-top: 568px;
+    padding-left: 365px;
+  }
+  .sectionHero {
+    height: 736px;
+  }
 }

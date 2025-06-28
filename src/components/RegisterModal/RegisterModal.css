@@ -23,8 +23,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  /* top: 0.5rem;
-  right: 1rem; */
+
   background: none;
   border: none;
   cursor: pointer;
@@ -95,4 +94,26 @@
   border: none;
   cursor: pointer;
   padding: 0;
+}
+@media screen and (max-width: 1024px) {
+  .modal {
+    padding: 22px;
+    max-width: 465px;
+  }
+  .authTitle {
+    font-size: 30px;
+  }
+  .iconClose {
+    width: 22px;
+    height: 22px;
+  }
+  .authDescription {
+    font-size: 14px;
+  }
+  .modal-submit {
+    padding: 16px 50px;
+    max-width: 430px;
+
+    font-size: 14px;
+  }
 }
